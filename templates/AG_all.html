@@ -19,6 +19,11 @@
                     $(this).next().slideToggle();
                 }
             });
+            $("#backbutton").click(function(){
+                $("html, body").animate({
+                    scrollTop: 0}, 500);
+                    return  false;
+                });
         });
     </script>
 
@@ -27,6 +32,7 @@
 <!-- https://www.codegrid.net/articles/2022-css-scroll-bar-1/ -->
 
 <body>
+    <button id="backbutton">Index</button>
     <div class="container">
         <div class="sidebar">
             <div class="m1">
@@ -412,7 +418,7 @@
     <div class="m1"><div class="i2"></div><div class="i1">特別規則</div><div class="i3"><a href="#h599">§599</a></div></div>
     <div class="m1"><div class="i2"></div><div class="i1">ピリオドの構</div><div class="i3"><a href="#h600">§600</a></div></div>
 </div>
-
+<!-- </article> -->
         </div>
         <div class="main-content">
             <div class='header1' id="hh268">第 2 部 ― 構文法 (Syntax)</div>
@@ -789,7 +795,7 @@
                 <p class='hangingp2'>285. 形容詞は、連体形容詞と述語形容詞のいずれかである。
                 <p class='hangingp1'>1. 連体形容詞は、明示的または黙示的な動詞や分詞の介在なしに、単に名詞を修飾する。例:<span class="latinspan">bonus imperātor
                     </span>は<span class="trans">優れた指揮官</span>、<span class="latinspan">stellae lūcidae</span>
-                    は明るい星、verbum Graecum
+                    は明るい星、<span class="latinspan">verbum Graecum</span>
                     は<span class="trans">ギリシャ語</span>。</p>
                 <p class='hangingp1'>2. その他のすべての形容詞は、述語形容詞と呼ばれる。
                 <p class='note'><span class="latinspan">stellae lūcidae erant </span>は<span
@@ -980,8 +986,8 @@
 
             <div class='header2' id="h290">副詞の効力を持つ形容詞 </div>
             <div name="290" id='290'>
-                290. 主語や目的語に一致する形容詞は、しばしば動詞の動作を限定するために使用され、副詞の力も同様に使用されます。<p class='note'><span class="latinspan">prīmus
-                        vēnit、</span><span class="trans">彼が最初に来た。</span><br>
+                <p class='hangingp2'>290. 主語や目的語に一致する形容詞は、しばしば動詞の動作を限定するために使用され、副詞の力も同様に使用されます。</p>
+                <p class='note'><span class="latinspan">prīmus vēnit、</span><span class="trans">彼が最初に来た。</span><br>
                     <span class="latinspan">nūllus dubitō、</span><span class="trans">私は決して疑いません。</span><br>
                     <span class="latinspan">laetī audiēre、</span><span class="trans">彼らは聞いて喜んだ。</span><br>
                     <span class="latinspan">erat Rōmae frequēns (Rose. Am. 16)、</span><span
@@ -1006,7 +1012,7 @@
                         class="latinspan">mōns altissimus、</span><span class="trans">非常に高い山。</span><br>
                     注. 卓越性の最上級は、人に対する賛辞としてよく使用され、多くの場合、単純肯定で翻訳されます。 </p>
 
-                <p class='hangingp1'>c. quam、vel、またはūnusを伴って、最上級は可能な限り最高の程度を表します。
+                <p class='hangingp1'>c. <span class="latinspan">quam、vel、</span>または<span class="latinspan">ūnus</span>を伴って、最上級は可能な限り最高の程度を表します。
                 <p class='note'><span class="latinspan">quam plūrimī、</span><span class="trans">できるだけ多く。</span><br>
                     <span class="latinspan">quam maximē potest (maximē quam potest)、</span><span
                         class="trans">できる限り多く。</span><br>
@@ -1034,7 +1040,7 @@
 
             <div name="292" id='292'>
                 <p class='hangingp2'>
-                    292. オブジェクトの 2 つの性質を比較する場合、両方の形容詞は比較級になります。—
+                    292. 対象の 2 つの性質を比較する場合、両方の形容詞は比較級になります。—
                 <p class='note'><span class="latinspan">longior quam lātior aciēs Erat (Liv. xxvii. 48)、</span><span
                         class="trans">線は幅広であるよりも長かった (または、幅広よりむしろ長かった)。</span><br>
                     <span class="latinspan">vērior quam grātior (id. xxii. 38)、</span><span
@@ -1079,7 +1085,7 @@
 
             <div class='header2' id="h294">代名詞</div>
             <div name="294" id='294'>
-                <p class='hangingp2'>294. 代名詞は、人や物を指名したり描写したりすることなく、それらを示します。代名詞は、場所と方向の概念のみを表していると思われる独特の語源から派生しており (§
+                <p class='hangingp2small'>294. 代名詞は、人や物を指名したり描写したりすることなく、それらを示します。代名詞は、場所と方向の概念のみを表していると思われる独特の語源から派生しており (§
                     228.
                     2)、そこから名詞や動詞が形成されることは非常にまれです。したがって、感覚や想像にすでに存在している人や物を指し示すだけでよく、指名する必要がない場合、代名詞は名詞の代わりになります。
                     代名詞の中には、そのクラスを参照せずに対象自体を指し示すものがあり、性別の区別がありません。これらは人称代名詞です。これらは構文上名詞の代わりになり、名詞と同じ構造をしています。
@@ -1114,12 +1120,12 @@
                         class="trans">誰が私を呼んでいるのですか。私（強調して）はあなたを呼んでいます。</span>
                 </p>
                 </p>
-                <p class='hangingp1'>b. 人称代名詞には、複数属格に対して 2 つの形式があり、-um では部分的（§ 346）に使用され、-ī では最も頻繁に客観的に使用されます（§ 348)。
+                <p class='hangingp1'>b. 人称代名詞には、複数属格に対して 2 つの形式があり、-um では部分の属格（§ 346）に使用され、-ī では最も頻繁に目的の属格に使用されます（§ 348）。
                 <p class='note'><span class="latinspan">mâior vestrum、</span><span class="trans">あなたの年長者。</span><br>
                     <span class="latinspan">habētis ducem memorem vestrī, oblltum sui (Cat. iv. 19)、</span><span
                         class="trans">あなたには、あなたのことを考え（心に留め）、自分自身を忘れる（忘れている）リーダーがいる。</span><br>
                     <span class="latinspan">pars nostrum、</span><span class="trans">私たちのうちの何人かとは別に。</span><br>
-                    注1. 属格nostrum、vestrumは、時折客観的に用いられる（§348）：<span class="latinspan">cupidus vestrum（Verr. iii.
+                    注1. 属格nostrum、vestrumは、時折目的に用いられる（§348）：<span class="latinspan">cupidus vestrum（Verr. iii.
                         224）</span><span class="trans">あなたを愛している</span>；<span class="latinspan">cūstōs vestrum（Cat. iii.
                         29）</span>、<span class="trans">あなたの保護者</span><br>
                     注2. 「彼らのうちの一人」は<span class="latinspan">ūnus ex suīs</span>またはi<span
@@ -1135,7 +1141,7 @@
 
             <div name="296" id='296'>
                 <p class='hangingp2'>296. 指示代名詞は形容詞的にも名詞的にも使用されます。</p>
-                <p class='hangingp1'>1. 形容詞として、指示代名詞は形容詞の一致の規則に従い、形容詞代名詞または代名詞形容詞と呼ばれます (§§ 286、287):—
+                <p class='hangingp1'>1. 形容詞として、指示代名詞は形容詞の一致の規則に従い、形容代名詞または代名形容詞と呼ばれます (§§ 286、287):—
                 <p class='note'><span class="latinspan">hōc proeliō factō、</span><span class="trans">この戦いが戦われた後に
                         (この戦いが戦われた後)。</span><br>
                     <span class="latinspan">eōdem proeliō、</span><span class="trans">同じ戦いで。</span><br>
@@ -1716,7 +1722,7 @@
 
             <div name="310" id='310'>
                 <p class='hangingp2'>310. <b>Quis、quispiam、aliquis、quidam</b> は特定の不定詞であり、いくつかの、特定の、任意のを意味します。これらのうち、quis
-                    は最も明確ではなく、quidam は特定のもので最も明確です。 aliquis と quispiam、誰かがこの 2 つの間に立っています:—</p>
+                   (any one)は最も明確ではなく、quidam(a certain one)は特定のもので最も明確です。 aliquis と quispiam、(some one)がこの 2 つの間に立っています:—</p>
                 <p class='note'><span class="latinspan">dīxerit quis (quispiam)</span><span
                         class="trans">誰かが言うかもしれません。</span>
                     <br />
@@ -1974,7 +1980,7 @@
                 </p>
 
 
-                <p class='hangingp1'>c.動詞が二つあるいはそれ以上の主語に別々に属する場合、その動詞はしばしばそのうちの一つと一致し、他の主語と共に理解される:—
+                <p class='hangingp1'>c. 動詞が二つあるいはそれ以上の主語に別々に属する場合、その動詞はしばしばそのうちの一つと一致し、他の主語と共に理解される:—
                 <p class='note'><span class="latinspan">intercēdit M. Antōnius Q. Cassius tribūnī plēbis (B. C. i.
                         2)</span>、<span class="trans">人民の護民官であるマルクス・アントニウスとクィントゥス・カッシウスが介入する。</span><br />
                     <span class="latinspan"> hōc mihi et Peripatēticī et vetus Acadēmia concēdit (Acad. ii.
@@ -2141,7 +2147,7 @@
             <div class='header2' id="h320">不変化詞</div>
             <div class='header2'> 副詞</div>
             <div name="320" id='320'>
-                <p class='hangingp2'>320. 副詞の本来の機能は、固定化した格形として、動詞を修飾することです。例えば、<span class="latinspan">celeriter
+                <p class='hangingp2small'>320. 副詞の本来の機能は、各変化なしで、動詞を修飾することです。例えば、<span class="latinspan">celeriter
                         īre</span>（<span class="trans">速く行く）</span>。副詞の名前の由来はこの用法からきています（adverbium、ad（～に）とverbum（動詞）から。§
                     241. b
                     を参照）。副詞はまた、形容詞を修飾して、表現されている性質がどのような方法や程度で表されているかを示します。例えば、<span class="latinspan">splendidē
@@ -2204,21 +2210,21 @@
 
             <div name="322" id='322'>
                 <p class='hangingp2'>
-                    322. 以下の副詞には特別な注意が必要である。
+                    322. 以下の副詞には特別な注意が必要である。</p>
                 <p class='hangingp1'>
                     a. <b>Etiam</b> (et iam) は、「もまた」、「でさえ」、であり、<b>quoque</b> (もまた) よりも強く、通常、強調語の前に置かれ、それに対しquoque
-                    はその後に置かれる。
+                    はその後に置かれる。</p>
                 <p class='note'><span class="latinspan">nōn verbīs sōlum sed etiam vī (Verr. ii. 64)</span> <span
                         class="trans">は、言葉だけでなく、力によっても。 </span><br />
                     <span class="latinspan">hōc quoque maleficium (Rosc. Am. 117)</span> <span
                         class="trans">この犯罪も。</span>
                 </p>
-                </p>
+                
 
                 <p class='hangingp1'>b. Nunc は、確かに「今」、「ごく最近」のことを意味し、ごく最近の過去についてはあまり使用されない。 Iam
                     は、「今」、「すでに」、「ようやく」、「現在の」を意味し、記述されている状態に到達した、または達する前の時点への言及を含む。いつでも使用できる。否定形の場合、iam は 「もはや」を意味する。 Tum
                     は「その時」、cum
-                    「いつ」 と相関があり、いつでも使用できる。Tunc は「その時」、「その時点」という意味で、tum (tum-ce、cf. nunc) の強められた形である。—
+                    「いつ」 と相関があり、いつでも使用できる。Tunc は「その時」、「その時点」という意味で、tum (tum-ce、cf. nunc) の強められた形である。—</p>
                 <p class='note'><span class="latinspan">ut iam anteā dīxī</span><span
                         class="trans">すでに述べたとおり。</span><br />
                     <span class="latinspan">sī iam satis aetātis atque rōboris habēret (Rosc. Am. 149)、</span><span
@@ -2233,14 +2239,16 @@
                     <span class="latinspan">tum cum rēgnābat, </span><span class="trans">彼が君臨していた時
                     </span>
                 </p>
-                </p>
+                
 
-                <p class='hangingp1'>c. Certōは「確かに」、certē「通常」、「少なくとも」、「いずれにせよ」という意味です：
+                <p class='hangingp1'>c. Certōは「確かに」、certē「通常」、「少なくとも」、「いずれにせよ」という意味です：</p>
                 <p class='note'><span class="latinspan">certō sciō、</span><span class="trans">私は確かに知っています。; </span><span
                         class="latinspan">ego certē、</span><span class="trans">少なくとも私は。</span> </p>
-                </p>
+                
                 <p class='hangingp1'>
-                    d. Prīmumは「最初」（順番で最初、または初めて）を意味し、一連の出来事や行為を意味します。 Prīmōは後でではなく「最初に」を意味し、、単に時間が突出していることを強調します：
+                    d. Prīmumは「最初」（順番で最初、または初めて）を意味し、一連の出来事や行為を意味します。
+                     Prīmōは後でではなく「最初に」を意味し、、単に時間が突出していることを強調します：
+                </p>
                 <p class='note'><span class="latinspan">hōc prīmum sentiō、</span><span
                         class="trans">私はまずこれを支持する。</span><br />
                     <span class="latinspan">aedīs prīmō ruere rēbāmur、</span><span
@@ -2248,20 +2256,20 @@
                 </p>
                 <p class='spnote'>
                     注：列挙では、prīmum（またはprīmō）の後には、deinde、「第二に」、または「次の場所」、またはtum、「それから」が続き、またはその両方が続くことがよくあります。 Deinde
-                    は複数回繰り返されることがあります 「2 番目、3 番目など」。この一連の語は、多くの場合、dēnique または postrēmō 「最後に、最終的に)」で終わります。たとえば、<span
+                    は複数回繰り返されることがあります 「2 番目、3 番目など」。この一連の語は、多くの場合、dēnique または postrēmō 「最後に、最終的に」で終わります。たとえば、<span
                         class="latinspan">prīmum dē genere bellī、deinde dē māgnitūdine、turn dē im-perātōre dēligendō
                         (Manila. 6)
-                    </span>は、<span class="trans">まず戦争の種類、次にその規模、そして指揮官の選択についてです。</span></p>
-
+                    </span>は、<span class="trans">まず戦争の種類、次にその規模、そして指揮官の選択についてです。</span>
                 </p>
                 <p class='hangingp1'>e. Quidem は「確かに」で強調を表し、特に sed、autem などが続く場合は、譲歩的な意味を持つことがよくあります:—
+                </p>
                 <p class='note'><span class="latinspan">hōc quidem vidēre licet (Lael. 54)、</span><span
                         class="trans">これは確かに 1
                         つわかるでしょう。 [強調] </span><br />
                     <span class="latinspan">[sēcūritās] speciē quidem blanda, sed reāpse multīs locīs repudianda (id.
                         47)、</span>（<span class="trans">静けさ）外見上は確かに魅力的だが、実際は多くの理由で拒絶される。[譲歩] </span>
                 </p>
-                </p>
+                
 
                 <p class='hangingp1'>f. Nē … quidem は、「…でもない」、あるいは「…でさえもない」という意味です。強調語は nē と quidem の間になければなりません：— </p>
                 <p class='note'><span class="latinspan">sed nē Iugurtha quidem quiētus erat (lug. 51)、</span><span
@@ -2277,7 +2285,8 @@
 
             <div class='header2' id="h323">接続詞</div>
             <div name="323" id='323'>
-                <p class='hangingp2'>323. 結合接続詞(Copulative)と選言接続詞(Disjunctive)は、同様の構文を接続し、通常、その前にある同じ格または法が後に続きます。</p>
+                <p class='hangingp2'>323. 結合接続詞(Copulative)と選言接続詞(Disjunctive)は、同様の構文を接続し、
+                    通常、その前にある同じ格または法が後に続きます。</p>
                 <p class='note'> <span class="latinspan">scriptum sānārēs et populo(Cat. iii. 10) </span><span
                         class="trans">元老院と人民に書かれた</span><br />
                     <span class="latinspan"> ut eās [partīs] sānārēs et cōnfírmārēs (Mil. 68),</span> <span
@@ -2286,6 +2295,7 @@
                         29),</span><span class="trans">私自身の先見性にも人間の知恵にも頼っていません。</span>
                 </p>
                 <p class='hangingp1'>ａ．比較の接続詞 ( ut、quam、tamquam、quasi) も、一般に同様の構造を接続します。—
+                </p>
                 <p class='note'><span class="latinspan">igitur quam physicīs putius credendum exīstimās (Div. ii.
                         37)、</span><span class="trans">これらは自然哲学者よりも信頼できると思いますか? </span><br />
                     <span class="latinspan">hominem callidiōrem vīdī nēminem quam Phormiōnem (Ter. Ph. 591),</span><span
@@ -2296,37 +2306,38 @@
                     <span class="latinspan"> in mē quasi in tyrannum (Phil. xiv. 15),</span><span
                         class="trans">暴君に対するものとして私に対して。</span>
                 </p>
-                </p>
+                
                 <p class='hangingp1'>
                     b. 2 つ以上の等位の単語、フレーズ、文が、接続詞を使用せずに組み合わされることがよくあります (Asyndeton、§ 601.c):
+                </p>
                 <p class='note'><span class="latinspan">omnēs dī、hominēs、</span><span class="trans">すべての神と人。
                     </span><br />
                     <span class="latinspan">summī、mediī、īnfīmī、</span><span class="trans">最上級、中級、最下位。</span><br />
                     <span class="latinspan">iūra, lēgēs, agrōs, lībertātem nōbīs reliquērunt (B. G. vii. 77),
                     </span><span class="trans">彼らは私たちの権利、法律、畑、自由を残しました。</span>
                 </p>
+                
+                <p class='hangingp1'> c. 1. 等位語が 3 つ以上ある場合など、接続詞が使用される場合は、通常、すべて (または最初の単語を除くすべて) で使用されます:--
+                
                 </p>
-                <p class='hangingp1'>
-                    c.
-                <p class='indent1p'>1. 等位語が 3 つ以上ある場合など、接続詞が使用される場合は、通常、すべて (または最初の単語を除くすべて) で使用されます:--
                 <p class='note'><span class="latinspan">aut aere aliēnō aut māgnitūdine tribūtōrum aut iniūriā
                         potentiōrum (B. G.
                         vi. 13),</span><span class="trans">借金、過剰な税金、権力者による抑圧。</span><br />
                     <span class="latinspan">at sunt mōrōsī et anxiī et īrācundī et difficilēs senēs (Cat. M. 65),</span>
                     <span class="trans">しかし、(あなたが言うには) 老人は気まぐれで、気まぐれ、心配性で、短気で、うるさいのです。</span>
                 </p>
-                </p>
-                <p class='indent1p'>
-                    2. しかし、単語は多くの場合、グループに分割されているため、グループのメンバーは接続詞を省略 (または表現) しますが、グループ自体は接続詞を表現します (または省略します) ：―
+                
+                <p class='noindentp'>
+                    2. しかし、単語は多くの場合、グループに分割されているため、グループのメンバーは接続詞を省略 (または表現) しますが、グループ自体は接続詞を表現します (または省略します) ：―</p>
                 <p class='note'><span class="latinspan">propudium illud et portentum, L. Antōnius īnsīgne odium omnium
                         homi-num
                         (Phil. xiv. 8),</span><span class="trans">悪党で怪物、ルキウス・アントニウス、人類の忌まわしい存在。</span><br />
                     <span class="latinspan">utrumque ēgit graviter, auctōritāte et offēnsiōne animī nōn acerbā (Lael.
                         77),</span><span class="trans">彼はどちらの場合でも威厳を持って行動し、権威を失うことも、苦々しい感情を抱くこともなかった。</span>
                 </p>
-                </p>
-                <p class='indent1p'>
-                    3. 明確なグループ分けがない場合でも、enclitic -que はシリーズの最後のメンバーに使用されることがあります。 —
+                
+                <p class='noindentp'>
+                    3. 明確なグループ分けがない場合でも、enclitic -que はシリーズの最後のメンバーに使用されることがあります。 —</p>
                 <p class='note'><span class="latinspan">vōce voltü mōtōque (Brut. 110)、</span><span
                         class="trans">声、表情、ジェスチャーによって。</span><br />
                     <span class="latinspan">cūram cōnsilium vigilantiamque (Phil. vii. 20),、</span><span
@@ -2334,17 +2345,17 @@
                     <span class="latinspan">quōrum auctōritātem dīgnitātem voluntātemque dēfenderās (Fam. i. 7. 2),
                     </span><span class="trans">あなたは誰の尊厳、名誉、そして願いを擁護したのでしょう </span>
                 </p>
-                </p>
-                </p>
+                
+                
                 <p class='hangingp1'>
-                    d.同じ名詞に属する 2 つの形容詞は、通常、接続詞によって接続されます。—
+                    d. 同じ名詞に属する 2 つの形容詞は、通常、接続詞によって接続されます。—</p>
                 <p class='note'><span class="latinspan">multae et gravēs causae、</span><span class="trans">多くの重要な理由。
                     </span><br />
                     <span class="latinspan">vir liber ac fortis (Rep. ii. 34)、</span><span class="trans">自由で勇敢な男</span>
                 </p>
-                </p>
+                
                 <p class='hangingp1'>
-                    e.多くの場合、同じ接続詞が 2 つの等位節で繰り返されます:
+                    e. 多くの場合、同じ接続詞が 2 つの等位節で繰り返されます:</p>
                 <p class='note'> <span class="latinspan">et ... et (-que ... -que)、</span><span class="trans">両方 ...
                         そして。</span><br />
                     <span class="latinspan">aut ... aut、</span><span class="trans">どちらか ... または</span><br />
@@ -2353,9 +2364,11 @@
                     <span class="latinspan">sīve (seu) … sīve (seu)、</span><span class="trans">かどうか…または。 [§ 324.f.
                         の例]</span>
                 </p>
-                </p>
+                
                 <p class='hangingp1'>
-                    f.多くの副詞が対になって同じようなな使われ方をしてします。接続詞として、使われ副詞の力を部分的または完全に失います:—
+                    f. 多くの副詞が対になって同じようなな使われ方をしてします。接続詞として、使われ副詞の力を部分的または完全に失います:—
+
+                </p>
                 <p class='note'><span class="latinspan">nunc ... nunc、turn ...turn、iam ... iam、</span><span
                         class="trans">今 ...
                         今,</span><br />
@@ -2372,8 +2385,9 @@
                     <span class="latinspan">qua marīs qua fēminās (P1. Mil. 1113)、</span><span
                         class="trans">男性と女性の両方。</span>
                 </p>
+                
+                <p class='hangingp1'>g. 特定の関係副詞および指示副詞は、接続詞として相関的に使用されます:—
                 </p>
-                <p class='hangingp1'>g.特定の関係副詞および指示副詞は、接続詞として相関的に使用されます:—
                 <p class='note'><span class="latinspan">ut (rel.) … ita、sīc (dem.)、</span><span class="trans">as (while)
                         … so
                         (yet)。</span> <br />
@@ -2381,13 +2395,15 @@
                         only … but
                         also.</span>
                 </p>
-                </p>
+                
             </div>
 
             <div name="324" id='324'>
                 <p class='hangingp2'>324. 次の接続詞には注意が必要である:
+                </p>
                 <p class='hangingp1'>a. Et, and は単に単語や節をつなげる。-que はより密接に結合してひとつの全体を形成する。
                     -que は常に、結びつく一つの語、または２つ以上の語の最初または二番目の語のあとに続き、前の語に接続するので「前接語(enclitic)」（後倚辞）と言われる。:
+                </p>
                 <p class='note'><span class="latinspan">cum coniugibus et līberīs, </span><span
                         class="trans">[彼らの]妻と子供たちと。
                     </span><br />
@@ -2396,10 +2412,11 @@
                     <span class="latinspan">aquā et īgnī interdictus,</span> <span
                         class="trans">水と火の使用を禁じる。[法律の定式では、それらは別々に扱われる。]</span>
                 </p>
+                
+                <p class='hangingp1'>b. Atque (ac), 「そして」 は、追加された単語に何らかの強調または何らかの暗黙の反映を加えて追加する。
+                    したがって、これは [and so, and yet, and besides, and then ]と同等であることが多い。
+                    しかし、これらの区別は話者の感情に大きく依存し、翻訳できないことが多い。
                 </p>
-                <p class='hangingp1'>b. Atque (ac), 「そして」 は、追加された単語に何らかの強調または何らかの暗黙の反映を加えて追加する。したがって、これは [and so, and
-                    yet, and
-                    besides, and then ]と同等であることが多い。しかし、これらの区別は話者の感情に大きく依存し、翻訳できないことが多い。
                 <p class='note'><span class="latinspan">omnia honesta atque inhonesta、</span><span
                         class="trans">名誉あることも不名誉なこともすべて（まったく、わずかな区別もなく）</span><br />
                     <span class="latinspan">ūsus atque disciplina、</span><span
@@ -2407,6 +2424,7 @@
                     <span class="latinspan">atque ego crēdō、</span><span class="trans">それでも私は信じている（私としては）。</span>
                 </p>
                 <p class='hangingp1'>c. Atque (ac) は、as、than の意味で、比較や類似の言葉の後に使われる。
+                </p>
                 <p class='note'><span class="latinspan">simul atque、</span><span class="trans">できるだけ早く。</span><br>
                     <span class="latinspan">nōn secus (nōn aliter) ac sī、</span><span class="trans">if
                         以外の何物でもない。</span><br>
@@ -2416,26 +2434,26 @@
                         class="trans">彼らは命令されたとおりにする。</span><br>
                     for と not については、§ 328.a を参照
                 </p>
-                </p>
-                </p>
 
                 <p class='hangingp1'>d. <b>Sed</b> と、より強調された <b>vērum</b> または <b>vērō</b>, (but)
-                    は、特に否定文の後に、先行するものと対立する何かを導入するのに使用されます (not this ... but something ellse)。<b>At</b> (古い形式
+                    は、特に否定文の後に、先行するものと対立する何かを導入するのに使用されます (not this ... but something else)。<b>At</b> (古い形式
                     ast)は、議論の中で新しい点を強調して導入しますが、
-                    他のものと同じようにも使用されます。: 時には少なくともという意味で使用されます。
+                    他のものと同じようにも使用されます。; 時には少なくともという意味で使用されます。<br>
                     <b>At enim</b> は、ほとんどの場合、現在覆される予定の異論を導入するのに使用されます。At がこの意味で単独で使用されることはあまりありません。
                     <b>Autem</b>, (however, now)は、対立語の中で最も弱いもので、多くの場合、単なる移行を示し、対立力がほとんど感じられません。
                     <b>Atquī</b>, (however, now) は、異論を導入する場合もあれば、推論の新たなステップを導入する場合もあります。
                     Quod sī, (but if, and if, now if )は、議論を続けるために使用されます。
+                </p>
                 <p class='spnote'>注: Et、-que、atque (ac) は、英語の慣用句では but
                     と示唆されるような場合にも使用されることがあります。特に、否定節の後に同じ考えを続ける肯定節が続く場合です。たとえば、<span class="latinspan">impetum hostēs
                         ferre nōn
                         potuērunt ac terga vertērunt (B.
-                        G. iv. 35)</span>、<span class="trans">敵は攻撃に耐えられず、背を向けました。</span></p>
+                        G. iv. 35)</span>、<span class="trans">敵は攻撃に耐えられず、背を向けました。</span>
                 </p>
 
                 <p class='hangingp1'>e. aut, (or) は代替を除外します。<b>vel </b>(volō の古い命令形) と -ve は、2
                     つの選択肢から選択できるようにします。ただし、この区別は常に守られるわけではありません。
+                </p>
                 <p class='note'><span class="latinspan">sed quis ego sum aut quae est in mē facultās (Lael.
                         17)、</span><span class="trans">しかし、私は誰なのか、またはどのような特別な能力を持っているのか? [ここでは vel
                         は使えない。なぜなら、実際には否定が暗示されており、両方の選択肢が排除されているからである。] </span><br>
@@ -2452,26 +2470,25 @@
                     <span class="latinspan">implicāti vel ūsū diūturnō vel etiam offíciīs (id. 85)、</span><span
                         class="trans">親密な関係、あるいは義務によってさえも絡み合っている。[ここでは、2番目の格が最初の格を排除する可能性がある。]</span>
                 </p>
-                </p>
-
-
+                
                 <p class='hangingp1'> f. <b>Sīve (seu)</b> は、選択的条件 (if Either … または if) で適切に使用されるが、代替語や節、特に同じものを表す 2
                     つの名前で使用される場合もある:—
+                </p>
                 <p class='note'><span class="latinspan">sīve inrīdēns sīve quod
                         ita putāret (De Or. i. 91)、</span><span class="trans">笑って、または本当にそう思ったから。 </span><br>
                     <span class="latinspan">sīve deae seu sint volucrēs (Aen. iii. 262)、</span><span class="trans">彼ら
                         (ハーピー)
                         が女神であるか鳥であるか。</span>
                 </p>
-                </p>
 
                 <p class='hangingp1'>g.たとえば、<b>vel </b>は、しばしば、代わりの力を持たない強意語として使われる。—<span class="latinspan">vel
                         minimus</span>、<span class="trans">最小の。</span></p>
 
                 <p class='hangingp1'>h. <b>Nam</b> と <b>namque</b>、(for )は通常、前の陳述に対する正式な表現による本当の理由を導入する。<b>enim</b>
-                    (常に後置詞)
-                    は、ついでに付け加えられた、それほど重要でない説明的な状況を導入する。etenim
-                    (なぜなら、わかるだろう、なぜなら、知っているだろう、なぜなら、念のため) とその否定形 <b>neque enim</b> は、自明のこと、または証明を必要としないことを導入する。
+                    (常に後置詞) は、ついでに付け加えられた、それほど重要でない説明的な状況を導入する。
+                    etenim (なぜなら、わかるだろう、なぜなら、知っているだろう、なぜなら、念のため) とその否定形 <b>neque enim</b> は、
+                    自明のこと、または証明を必要としないことを導入する。
+                </p>
                 <p class='note'><span class="latinspan">(ea vīta) quae est sōla vīta
                         nōminanda。nam dum sumus inclūsī in his compāgibus corporis, mūnere quōdam necessitātis et gravī
                         opere
@@ -2482,11 +2499,11 @@
                         class="trans">もちろん最初のものは真実ではありません。</span>
                 </p>
 
-                <p class='hangingp1'>i. <b>Ergō</b>, (therefore) は、形式的に証明された事柄について使われますが、その力は弱められることが多いです。<b>Igitur</b>,
-                    (then,
-                    therefore) は、ergō
-                    よりも弱く、議論のある段階から次の段階に移るときに使われます。<b>Itaque</b>,(therefore, according, and so)
-                    は、形式的な論理的証明よりも、物事の性質からの証明や推論に使われます。これらはすべて、脱線や括弧で中断された思考の流れを再開するために使われることが多いです。
+                <p class='hangingp1'>i. <b>Ergō</b>, (therefore) は、形式的に証明された事柄について使われますが、その力は弱められることが多いです。
+                    <b>Igitur</b>,(then, therefore) は、ergōよりも弱く、議論のある段階から次の段階に移るときに使われます。
+                    <b>Itaque</b>,(therefore, according, and so)
+                    は、形式的な論理的証明よりも、物事の性質からの証明や推論に使われます。
+                    これらはすべて、脱線や括弧で中断された思考の流れを再開するために使われることが多いです。
                     <b>Idcircō</b> (for this reason, on this account)は常に相関詞 (quia, quod, sī, ut, nē など) が後に (または前に)
                     付き、相関詞によってもたらされる特別な点を指します。
                 </p>
@@ -2502,14 +2519,12 @@
                         32)、</span><span class="trans">自然は変えることができないため、真の友情は永遠です。</span>
                 </p>
                 <p class='hangingp1'> j. <b>Autem、enim</b>、および <b>vērō</b> は後置詞です。</p>
-                <p class='hangingp1'>k. 似た意味を持つ接続詞は、強調するため、または文を前の文にさらに密接に結び付けるために、しばしば一緒に使用されます。例: <span
-                        class="latinspan">at
-                        vērō</span> (しかし、真実では、しかし確かに、それでも、しかしながら); i<span class="latinspan">taque ergō</span>
+                <p class='hangingp1'>k. 似た意味を持つ接続詞は、強調するため、または文を前の文にさらに密接に結び付けるために、しばしば一緒に使用されます。
+                    例: <span class="latinspan">at vērō</span> (しかし、真実では、しかし確かに、それでも、しかしながら); i<span class="latinspan">taque ergō</span>
                     (したがって、それゆえ;) n<span class="latinspan">amque</span> (〜のために)、<span class="latinspan">et-enim</span>
-                    (〜のために、おわかりのように、もちろん (§
-                    324.h))。
-                <p class='spnote'>従属節を導入する接続詞については、構文法（Syntax)をを参照してください。</p>
+                    (〜のために、おわかりのように、もちろん (§ 324.h))。
                 </p>
+                <p class='spnote'>従属節を導入する接続詞については、構文法(Syntax)をを参照してください。</p>
                 </p>
             </div>
 
@@ -12611,7 +12626,6 @@
                 しかし、議論や物語においては、優れた英語作家は、それぞれが他の文章とは区別され、それ自体が一つのことを語る、短く明瞭な文章を書くのが一般的です。一方、ラテン語では、物語や議論は全体として捉えられ、そのすべての部分の論理的関係が注意深く示されます。
                 </p>
             </div>
-
 
         </div>
 

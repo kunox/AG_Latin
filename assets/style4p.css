@@ -1,51 +1,79 @@
 body {
-    /* font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif; */
-    font-family:  '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
     background-color: #ebe9e1;
-    font-size:16px;
+    font-size: 16px;
     padding: 10px;
     line-height: 150%;
     text-shadow: 0px 0px 0px #000;
     width: 100%;
-    margin :0 auto;
-    overflow-y: hidden;
+    margin: 0 auto;
+    /* overflow-y: hidden; */
 }
 
 .container {
-    display: grid; /* グリッドレイアウトを使用 */
-    /*grid-template-columns: 1fr 4fr; 3:1 の比率でカラムを設定*/
-    grid-template-columns: 29% 70%;
-    gap: 10px; /*カラム間の隙間を作る */
-    max-width: 100%;;
-    margin: 0 auto; /* 中央に配置 */
-    /* padding: 30px; */
-    box-sizing: border-box; /* パディングを含めて幅を計算 */
+    display: grid;
+    /* グリッドレイアウトを使用 */
+    grid-template-columns: 30% 70%;
+    gap: 1px;
+    /*カラム間の隙間を作る */
+    max-width: 100%;
+    ;
+    margin: 0 auto;
+    /* 中央に配置 */
+    box-sizing: border-box;
+    /* パディングを含めて幅を計算 */
     /* overflow: scroll; */
 }
 
 .sidebar {
-    /* margin:40px; */
     padding: 40px 20px 20px 0px;
-    background-color: #ebe9e1;
+    background-color: #e2e2d8;
     overflow-y: scroll;
-    max-height: 90vh;;
-    /* position:fixed; */
+    max-height: 90vh;
+    ;
 }
 
 .main-content {
-    /* padding: 20px; */
     padding: 20px 6em 20px 6em;
-    background-color: #ebe9e1;
+    background-color: #ebebe1;
     overflow-y: scroll;
     max-height: 94vh;
-    /* position:fixed; */
 }
+
+/* 戻るボタン */
+#backbutton {
+    position: fixed;
+    top: 40px;
+    left: 10px;
+    height: 30px;
+    visibility: hidden;
+}
+
 h1 {
     text-align: center;
     color: #003333;
     margin: 10px;
     font-size: 26px;
-    font-family:  "Noto Serif JP", serif;
+    font-family: "Noto Serif JP", serif;
+}
+
+@media screen and (max-width:480px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 20px 1em 20px 3em;
+    }
+
+    #backbutton {
+        /* position: fixed;
+        top: 40px;
+        left: 10px;  
+        height:30px;   */
+        visibility: visible;
+    }
 }
 
 .header1 {
@@ -58,7 +86,7 @@ h1 {
     text-align: center;
     line-height: 130%;
     padding-top: 2em;
-    margin-left:-2em;
+    margin-left: -2em;
 }
 
 .header2 {
@@ -69,37 +97,40 @@ h1 {
     text-align: center;
     line-height: 150%;
     padding-top: 1em;
-    margin-left:-2em;
+    margin-left: -2em;
     color: #003333;
 }
+
 .header3 {
     margin: 0 auto;
     font-size: 20px;
     text-align: center;
     line-height: 150%;
     padding-top: 1em;
-    margin-left:-5em;
+    margin-left: -5em;
 }
+
 .hangingp2 {
-    margin: 0.5em 0 0 0;
+    margin: 1em 0 0 0;
     word-wrap: break-word;
     text-indent: -2em;
 }
+
 .hangingp2small {
-    margin: 0.5em 0 0 0;
+    margin: 1em 0 0 0;
     word-wrap: break-word;
     text-indent: -2em;
     font-size: 88%;
 }
 
 .hangingp1 {
-    margin: 0.5em 0 0 0;
+    margin: 0.2em 0 0 0;
     /* line-height: 140%; */
     word-wrap: break-word;
     text-indent: -1em;
 }
 
-.hangingp1360{
+.hangingp1360 {
     margin: 0 0 0 0;
     /* line-height: 140%; */
     word-wrap: break-word;
@@ -110,32 +141,36 @@ h1 {
 .p16 {
     font-size: 88%;
     /* line-height: 140%; */
-    margin:0 0 0 0;
+    margin: 0 0 0 0;
 
 }
-.indent4{
-    font-size:16px;
+
+.indent4 {
+    font-size: 16px;
     margin: 0.5em 0 0 4em;
 }
-.indent6{
-    font-size:16px;
+
+.indent6 {
+    font-size: 16px;
     margin: 0 0 0 6em;
     line-height: 120%;
 }
-.indent8{
-    font-size:16px;
+
+.indent8 {
+    font-size: 16px;
     margin: 0 0 0 8em;
     line-height: 120%;
 }
 
-.indent10{
-    font-size:16px;
+.indent10 {
+    font-size: 16px;
     margin: 0.5em 0 0 10em;
 }
-.indent14{
+
+.indent14 {
     font-size: 16px;
     line-height: 120%;
-    margin:0 0 0 14em;
+    margin: 0 0 0 14em;
 }
 
 
@@ -143,28 +178,32 @@ h1 {
     /* font-size:18px; */
     margin: 0.5em 0 0 0;
 }
-.indent1p{
+
+.indent1p {
     /* font-size:18px; */
-    margin:0 0 0 2em;
+    margin: 0 0 0 2em;
 }
+
 .note {
     line-height: 140%;
     font-size: 14px;
     margin: 0 0 0 2em;
 }
+
 .spnote {
     line-height: 140%;
     font-size: 14px;
     margin: 0.5em 0 0 2em;
 }
-.tightnote{
+
+.tightnote {
     line-height: 130%;
     font-size: 14px;
     margin: 0 0 0 2em;
 }
 
 .footnote {
-    margin-top:  1em;
+    margin-top: 1em;
     border-top: 1px solid;
     padding-top: 0.5em;
     border-bottom: 1px solid;
@@ -186,7 +225,8 @@ h1 {
     font-size: 14px;
     font-style: italic;
 }
-.transeng{
+
+.transeng {
     font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
     font-size: 16px;
     font-style: italic;
@@ -199,85 +239,95 @@ h1 {
 
 /************2-col*************************/
 .base2col {
-    display:grid;
+    display: grid;
     grid-template-columns: 50% 50%;
-    gap: 10px ;
-    margin:0.5em auto;
+    gap: 10px;
+    margin: 0.5em auto;
     box-sizing: border-box;
 }
-.base2colv{
-    display:grid;
+
+.base2colv {
+    display: grid;
     grid-template-columns: 55% 45%;
-    gap: 10px ;
-    margin:0.5em auto;
+    gap: 10px;
+    margin: 0.5em auto;
     box-sizing: border-box;
 }
+
 .item2col {
     padding: 0 0 0 2em;
     line-height: 140%;
     font-size: 14px;
 }
-.item2colw{
+
+.item2colw {
     padding: 0 0 0 2em;
     line-height: 140%;
     font-size: 18px;
 }
+
 .base4col {
-    display:grid;
+    display: grid;
     grid-template-columns: 14% 25% 30% 25%;
-    gap: 10px ;
+    gap: 10px;
     /* margin:0.5em auto; */
     box-sizing: border-box;
 }
+
 .item4col {
     font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
     padding: 0 0 0 2em;
     line-height: 130%;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 /********** 3-col ********/
-.base3col{
-    display:grid;
+.base3col {
+    display: grid;
     grid-template-columns: 10% 60% 30%;
-    gap: 10px ;
-    margin:0.5em 0 0 0;
+    gap: 10px;
+    margin: 0.5em 0 0 0;
     box-sizing: border-box;
 }
 
 /*******************for 483 **************************/
-.base3colborder{
+.base3colborder {
     display: grid;
     grid-template-columns: 35% 5% 45%;
     /* gap:5px; */
     box-sizing: border-box;
-  margin-bottom: 2em;
+    margin-bottom: 2em;
 }
+
 .cemteringdiv {
-    display:grid;
+    display: grid;
     font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
     font-size: 16px;
     font-weight: bold;
-    margin-top:2em;
+    margin-top: 2em;
 }
- .item0 {
-    display:grid;
+
+.item0 {
+    display: grid;
     place-content: center;
     border-bottom: 1px solid #000;
     font-size: 16px;
     /* margin-top: 2em; */
 
- }
- .itemb0 {
-    display:grid;
+}
+
+.itemb0 {
+    display: grid;
     /* place-content: center; */
     border-bottom: 1px solid #000;
- }
-.itemp{
+}
+
+.itemp {
     margin: 0px;
     padding: 0;
     /* text-align: center; */
 }
+
 .notex {
     line-height: 150%;
     font-size: 15px;
@@ -286,34 +336,41 @@ h1 {
 
 /************ for 503 ***********/
 #grid503 {
-    display:grid;
+    display: grid;
     /* grid-template-areas: "a a" "a a";
     grid-auto-columns: auto; */
     /* width:80%; */
     grid-template-columns: auto auto auto 150px;
     margin: 1em 0 1em 1em;
 }
+
 .i5031 {
     display: grid;
     align-content: center;
     text-align: right;
 }
+
 .i5032 {
     align-content: center;
-    text-align:  left;
-    padding-left : 1em ;
+    text-align: left;
+    padding-left: 1em;
 }
+
 .divline {
     height: 1px;
     border-bottom: 1px dotted #000;
 }
+
 .p0 {
     margin: 0;
     padding: 0;
 }
+
 #grid503>div {
-    border-bottom: 1px solid #000;;
+    border-bottom: 1px solid #000;
+    ;
 }
+
 .break {
     break-after: page;
 }
@@ -324,70 +381,63 @@ h1 {
     .container {
         display: grid;
         grid-template-columns: 0% 100%;
-    /* gap: 10px; カラム間の隙間を作る */
-    max-width: 100%;;
-    margin: 0 auto; /* 中央に配置 */
-    box-sizing: border-box; /* パディングを含めて幅を計算 */
+        /* gap: 10px; カラム間の隙間を作る */
+        max-width: 100%;
+        ;
+        margin: 0 auto;
+        /* 中央に配置 */
+        box-sizing: border-box;
+        /* パディングを含めて幅を計算 */
     }
 
-    .sidebar .container1 .item1 .item2 .item3{
-        display:none;
+    .sidebar .container1 .item1 .item2 .item3 {
+        display: none;
     }
+
     /* .container{
         display:grid;
         grid-template-columns: 0% 100%;
 
     } */
     .main-content {
-        width:80%;
+        width: 80%;
         max-height: 100%;
-        margin:0 auto;
+        margin: 0 auto;
     }
+
     .break {
         break-after: page;
     }
-    
+
 }
+
 /****************** for index (side bar)*****************************************/
 .sep {
     display: none;
     padding-left: 2em;
 }
-.m1,.container1 {
+
+.m1,
+.container1 {
     display: flex;
     vertical-align: text-bottom;
-    margin-top:6px;
+    margin-top: 6px;
     padding-left: 2em;
 }
 
-/* .m2,.container2 { */
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* height: 22px;
-    width: 300px;
-    background-color: aqua;
-    font-size: 18px; */
-    /* padding-left: 4em;
-} */
-
-/* .m3,.container3 {
-    display: flex;
-    padding-left: 6em;
-} */
-
-.i1,.item1 {
+.i1,
+.item1 {
     margin: auto 0 auto 4px;
     vertical-align: bottom;
 }
 
-.i2,.item2 {
+.i2,
+.item2 {
     margin: auto 0 auto 4px;
-    /* height: 24px; */
-    /* background-color: gray; */
 }
 
-.i3, .item3 {
+.i3,
+.item3 {
     padding-right: 2em;
     margin: auto 10px auto auto;
 }
-
