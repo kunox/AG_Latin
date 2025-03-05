@@ -1,5 +1,5 @@
 body {
-    font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+    font-family: Arial, '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
     background-color: #ebe9e1;
     font-size: 16px;
     padding: 10px;
@@ -102,12 +102,13 @@ h1 {
 }
 
 .header3 {
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     line-height: 150%;
     padding-top: 1em;
-    margin-left: -5em;
+    margin-left: -2em;
 }
 
 .hangingp2 {
@@ -440,4 +441,26 @@ h1 {
 .item3 {
     padding-right: 2em;
     margin: auto 10px auto auto;
+}
+
+/******* author and books ************/
+.col3container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap:2em;
+    margin:0 auto;
+    margin-top:1em;
+}
+.eachcol{
+    padding:0;
+}
+.namep {
+    padding: 0;
+    margin:0;
+
+}
+.bookp {
+    padding-left: 2em;
+    margin:0;
+    line-height: 120%;
 }
